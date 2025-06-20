@@ -3,9 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-body{
-  overflow-y: hidden;
-}
 
 @theme inline {
   --color-background: var(--background);
