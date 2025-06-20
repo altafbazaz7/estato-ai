@@ -4,7 +4,7 @@ import Image from "next/image";
 import BackButton from "@/components/ui/back";
 
 const dummyListings = new Array(12).fill(null).map((_, i) => ({
-  id: i.toString(), // convert to string to match URL params
+  id: i, 
   title: `Luxury Apartment ${i + 1}`,
   price: (1000 + i * 100).toLocaleString(),
   rating: (Math.random() * 2 + 3).toFixed(1),
@@ -13,7 +13,7 @@ const dummyListings = new Array(12).fill(null).map((_, i) => ({
   image: `https://images.pexels.com/photos/${1016159 + i}/pexels-photo-${1016159 + i}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`, // sample Pexels image
 }));
 
-export default function ListingPage({ params }: { params: { id: string } }) {
+export default function ListingPage({ params }: { params: { id: string | number } }) {
   const listing = dummyListings.find((item) => item.id === params.id);
   if (!listing) return notFound();
 
