@@ -13,7 +13,7 @@ const dummyListings = new Array(12).fill(null).map((_, i) => ({
   image: `https://images.pexels.com/photos/${1016159 + i}/pexels-photo-${1016159 + i}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260`, // sample Pexels image
 }));
 
-export default function ListingPage({ params }: { params: { id: string | number } }) {
+export default function ListingPage({ params }: { params: any }) {
   const listing = dummyListings.find((item) => item.id === params.id);
   if (!listing) return notFound();
 
