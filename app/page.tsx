@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import useUserLocation from "@/app/hooks/useUserlocation";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -41,12 +42,12 @@ export default function Home() {
           >
             Browse Listings
           </button>
-          <a
+          <Link
             className="rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 text-sm sm:text-base h-10 sm:h-12 px-6 flex items-center justify-center w-full sm:w-auto"
             href="/contact"
           >
             Chat With Estato AI Agent
-          </a>
+          </Link>
         </div>
       </main>
 

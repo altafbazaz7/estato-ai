@@ -25,7 +25,9 @@ export default function ChatMessage({
           }
         )}
       >
-        {text}
+        
+   <div dangerouslySetInnerHTML={{ __html: text }} />
+
       </div>
     </div>
   );

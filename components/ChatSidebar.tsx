@@ -9,9 +9,8 @@ interface Props {
 }
 
 export default function ChatSidebar({ selected, onSelect }: Props) {
-  const [chats, setChats] = useState<string[]>(["Chat 1", "Chat 2"]);
+  const [chats, setChats] = useState<string[]>([]);
 
-  // Auto-select the newest chat on creation
   useEffect(() => {
     if (!chats.includes(selected)) {
       onSelect(chats[chats.length - 1]);
