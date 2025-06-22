@@ -12,7 +12,7 @@ export const connectToDB = async () => {
 
   try {
     await mongoose.connect(MONGODB_URI, {
-      dbName: 'groweasy',
+      dbName: 'estato',
     });
     isConnected = true;
     console.log('✅ MongoDB connected');
